@@ -1,2 +1,0 @@
-The purpose of this code is to help Henry Krain, me, understand the fundamentals of computer science. More specifically, the langauge Java.
-This assignment is the Password Generator. I acquired this source code from KZarzour, his github username. All glory of this project should go to him.
