@@ -46,7 +46,7 @@ public class Generator{
 
                 default:
                 System.out.println();
-                System.out.println("Kindly select one fo the available commands");
+                System.out.println("Kindly, select one of the available commands");
                 printMenu();
 
                 }
@@ -122,7 +122,7 @@ public class Generator{
 
             if(!includeUpper && !includeLower && !includeNum && !includeSym){
                 System.out.println("You have selected no chracters to generate your " +
-                                    "password at least one of your answers should be Yes");
+                                    "password \nat least one of your answers should have been Yes");
                 correctParams = true;
             }
 
