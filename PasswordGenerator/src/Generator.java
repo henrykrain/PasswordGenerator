@@ -1,4 +1,3 @@
-//password generator
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -29,25 +28,30 @@ public class Generator{
             //compare his to https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html example
 
             switch(userOption){
-                case "1": 
+                case "1" -> { 
                 requestPassword();
                 printMenu();
+                }
 
-                case "2":
+                case "2" -> {
                 checkPassword();
                 printMenu();
+                }
 
-                case "3":
+                case "3" -> {
                 printUsefulInfo();
                 printMenu();
+                }
 
-                case "4":
+                case "4" -> {
                 printQuitMessage();
+                }
 
-                default:
+                default -> {
                 System.out.println();
                 System.out.println("Kindly, select one of the available commands");
                 printMenu();
+                }
 
                 }
             }
@@ -167,7 +171,7 @@ public class Generator{
     private void printMenu(){
         System.out.println();
         System.out.println("Enter 1 - Password Generator");
-        System.out.println("Enter 2 - password Strength Check");
+        System.out.println("Enter 2 - Password Strength Check");
         System.out.println("Enter 3 - Useful Information");
         System.out.println("Enter 4 - Quit");
         System.out.println("Choice:");
