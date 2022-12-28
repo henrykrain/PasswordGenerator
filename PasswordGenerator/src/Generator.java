@@ -128,23 +128,45 @@ public class Generator{
 
             if(!includeUpper && !includeLower && !includeNum && !includeSym){
                 System.out.println("You have selected no chracters to generate your " +
-                                    "password \nat least one of your answers should have been Yes");
+                                    "password \nat least one of your answers should have been Yes\n" +
+                                    "Press enter twice to try again or q to quit to the main menu");
+                String insert = keyboard.nextLine();
+                if(insert.equalsIgnoreCase("q")){
+                    return;
+                }
                 correctParams = false;
             }else{
                 correctParams = true;
             }
         }
+        try{   
+            //need to make this following try block a method but how???
+            //if its a method I can continously call it in the catch block so users can 
+            //try to enter in a number until they fail, the users must be apes or 
+            //have sausages for fingers
+            System.out.println("Great! Now enter the length of the password");
+            int length = keyboard.nextInt();
 
-           
+            final Generator generator = new Generator(includeUpper, includeLower, includeNum, includeSym);
+            final Password password = generator.GeneratePassword(length);
 
-        System.out.println("Great! Now enter the length of the password");
-        int length = keyboard.nextInt();
+            System.err.println("Your generated password -> " + password);
+        }catch (Exception ex){
+            System.out.println("You have entered something incorrect, please try again and enter a number");
+            //printMenu();
+        }
+    } 
+    //does not seem doable
 
-        final Generator generator = new Generator(includeUpper, includeLower, includeNum, includeSym);
-        final Password password = generator.GeneratePassword(length);
+    // public void passwordLength(){
+    //     System.out.println("Great! Now enter the length of the password");
+    //     int length = keyboard.nextInt();
 
-        System.err.println("Your generated password -> " + password);
-    }
+    //     final Generator generator = new Generator(includeUpper, includeLower, includeNum, includeSym);
+    //     final Password password = generator.GeneratePassword(length);
+
+    //     System.err.println("Your generated password -> " + password);
+    // }
     private boolean isInclude(String Input){
         if(Input.equalsIgnoreCase("yes")){
             return true;
@@ -171,8 +193,6 @@ public class Generator{
         final Password p = new Password(input);
 
         System.out.println(p.calculateScore());
-
-        in.close();
     }
 
     private void printMenu(){
@@ -181,7 +201,7 @@ public class Generator{
         System.out.println("Enter 2 - Password Strength Check");
         System.out.println("Enter 3 - Useful Information");
         System.out.println("Enter 4 - Quit");
-        System.out.println("Choice:");
+        System.out.print("Choice: ");
     }
 
     private void printQuitMessage(){
