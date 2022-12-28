@@ -101,7 +101,7 @@ public class Generator{
         //this is a do-while loop, it is the same as a while loop in
         //all regards execept that it checks the condition at the end 
         //of each loop body, ensuring that the loop is executed at least once                    
-        do{
+        while(!correctParams){
             System.out.println("Do you want lowercase letters \"abcd...\" to be used? ");
             String input = keyboard.nextLine();
 
@@ -122,22 +122,26 @@ public class Generator{
 
             if(isInclude(input)) includeSym = true;
 
-            //no pool selected, this is an issue
+            //no pool selected, this is an issue 
 
             if(!includeUpper && !includeLower && !includeNum && !includeSym){
                 System.out.println("You have selected no chracters to generate your " +
                                     "password \nat least one of your answers should have been Yes");
+                correctParams = false;
+            }else{
                 correctParams = true;
             }
+        }
 
-            System.out.println("Great! Now enter the length of the password");
-            int length = keyboard.nextInt();
+           
 
-            final Generator generator = new Generator(includeUpper, includeLower, includeNum, includeSym);
-            final Password password = generator.GeneratePassword(length);
+        System.out.println("Great! Now enter the length of the password");
+        int length = keyboard.nextInt();
 
-            System.err.println("Your generated password -> " + password);
-        } while(correctParams);
+        final Generator generator = new Generator(includeUpper, includeLower, includeNum, includeSym);
+        final Password password = generator.GeneratePassword(length);
+
+        System.err.println("Your generated password -> " + password);
     }
     private boolean isInclude(String Input){
         if(Input.equalsIgnoreCase("yes")){
