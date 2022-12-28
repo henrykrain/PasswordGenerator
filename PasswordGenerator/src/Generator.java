@@ -29,6 +29,8 @@ public class Generator{
 
             switch(userOption){
                 case "1" -> { 
+                System.out.println("Hello, welcome to the password generator :) answer"
+                + " the following questions by Yes or No\n");
                 requestPassword();
                 printMenu();
                 }
@@ -94,16 +96,16 @@ public class Generator{
 
         boolean correctParams = false;
 
-        System.out.println();
-        System.out.println("Hello, welcome to the password generator :) answer"
-                            + " the following questions by Yes or No\n");
 
         //this is a do-while loop, it is the same as a while loop in
         //all regards execept that it checks the condition at the end 
         //of each loop body, ensuring that the loop is executed at least once                    
         while(!correctParams){
-            System.out.println("Do you want lowercase letters \"abcd...\" to be used? ");
+            //put an intial 
             String input = keyboard.nextLine();
+
+            System.out.println("Do you want lowercase letters \"abcd...\" to be used? ");
+            input = keyboard.nextLine();
 
             if(isInclude(input)) includeLower = true;
 
@@ -156,6 +158,7 @@ public class Generator{
     }
     private void PasswordRequestError() {
         System.out.println("you have entered something incorrect let's go over it again \n");
+        //requestPassword();
     }
 
     private void checkPassword(){
