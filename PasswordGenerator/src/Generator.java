@@ -31,7 +31,6 @@ public class Generator{
                 System.out.println("Hello, welcome to the password generator :) answer"
                 + " the following questions by Yes or No\n");
                 requestPassword();
-                printMenu();
                 }
 
                 case "2" -> {
@@ -94,11 +93,7 @@ public class Generator{
         boolean includeSym = false;
 
         boolean correctParams = false;
-
-
-        //this is a do-while loop, it is the same as a while loop in
-        //all regards execept that it checks the condition at the end 
-        //of each loop body, ensuring that the loop is executed at least once                    
+                 
         while(!correctParams){
             //put an intial 
             String input = keyboard.nextLine();
@@ -150,9 +145,10 @@ public class Generator{
             final Password password = generator.GeneratePassword(length);
 
             System.err.println("Your generated password -> " + password);
+            printMenu();
         }catch (Exception ex){
             System.out.println("You have entered something incorrect, please try again and enter a number");
-            //printMenu();
+
         }
     } 
     //does not seem doable
