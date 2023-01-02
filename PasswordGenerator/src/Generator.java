@@ -1,13 +1,32 @@
 import java.util.Scanner;
 
 public class Generator{
+
+    /**
+     * represents the possible letters and characters possible
+     */
     Alphabet alphabet;
+
+    /**
+     * introduces a scanner class, allowing users to input their own data
+     */
     public static Scanner keyboard;
 
+    /**
+     * creates a scanner and assigns it to the previously declared attribute "keyboard"
+     * @param scanner a scanner to be used 
+     */
     public Generator(Scanner scanner){
         keyboard = scanner;
     }
 
+    /**
+     * creates a string containing uppercase letters, lowercase letters, numbers, or/and symbols
+     * @param includeUpper includes uppercase letters
+     * @param includeLower includes lowercase letters
+     * @param includeNum includes numbers (0-9)
+     * @param includeSym includes symbols
+     */
     public Generator(boolean includeUpper, boolean includeLower, boolean includeNum, boolean includeSym){
         alphabet = new Alphabet(includeUpper, includeLower, includeNum, includeSym);
     }
