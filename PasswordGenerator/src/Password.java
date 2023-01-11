@@ -26,13 +26,13 @@ public class Password {
             val = 4; //all other characters 
         }
         else if((int) C >= 58 && (int) C <= 64){
-            val = 4;
+            val = 4; //all other characters
         }
         else if((int) C >= 91 && (int) C <= 96){
-            val = 4;
+            val = 4; //all other characters
         }
         else if((int) C >= 123 && (int) C <= 126){
-            val = 4;
+            val = 4; //all other characters
         } 
         else {
             val = -1;
