@@ -34,7 +34,21 @@ public class GeneratorTest {
     }
 
     @Test 
-    public void test(){
-
+    public void test_is_the_password_scoring_method_correct(){
+        Password password = new Password("JingleBellKeys12!");
+        int actual = password.PasswordStrength();
+        assertEquals(5,actual);
+    }
+    @Test
+    public void test_is_the_password_scoring_method_correct_2(){
+        Password password = new Password("1");
+        int actual = password.PasswordStrength();
+        assertEquals(1, actual);
+    }
+    @Test
+    public void test_is_the_password_scoring_method_correct_3(){
+        Password password = new Password("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
+        int actual = password.PasswordStrength();
+        assertEquals(2, actual);
     }
 }
