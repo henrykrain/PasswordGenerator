@@ -6,6 +6,7 @@ experience and decided to copy his code. I went through and typed line for line 
 However, once I finished I noticed some errors that went unchecked in his code. What was supposed to be a simple 
 project turned into a complex debugging program. It provided me with much needed experience, experience I believe
 will translate better into the workplace and for my projects going forward.
+Here is the link to KZarzour's Project (https://github.com/KZarzour/Password-Generator) All glory to him
 
 The purpose of this project can be broken down into three functionalities: 
 1.) To Generate a Password
