@@ -15,6 +15,7 @@ The purpose of this project can be broken down into three functionalities:
 3.) To Provide Password Tips
 
 Below the functionalities are futher described
+
 1.) To Generate a Password
 -The user must answer by yes or no to a series of questions to decide what they will allow
 in the password. This includes upper/lower case, numbers, and characters
