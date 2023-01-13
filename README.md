@@ -1,4 +1,5 @@
 PasswordGenerator
+
 This project is a Java Console Application to generate Random passwords and performing a password strength check.
 
 I adapted this project from github user KZarzour. This was intended to be a straightforward project. I lacked
